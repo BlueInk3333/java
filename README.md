@@ -10,5 +10,5 @@ This project is about implementing data structures in JAVA.
    function 4. Get all node
 
    What I learned while working on,
-   ==> Objects Scope
+   ==> Objects Scope :
         Even if the object is defined within the method, it is not erased until the class is finished.
