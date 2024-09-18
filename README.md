@@ -43,6 +43,16 @@ This project is about implementing data structures in JAVA.
                   true
 
 
+
+   얕은 복사 경우에 주의!
+   주소값을 복사하는 것이지, 같은 메모리를 동일하게 가리킨다고 생각하지 말자.
+   아래와 같이 참조 변수가 null값을 가진 경우 오류가 발생할 수 있다.
+   Node a = null;
+   Node b = a;
+   a = new Node();
+
+   이때, a != b이다.
+   당연한 결과이지만, 쉽게 헷갈린다.
    
 
 
