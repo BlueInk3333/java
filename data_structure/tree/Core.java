@@ -12,5 +12,22 @@ public class Core {
         tree.addData(1,tree.root);
 
         tree.printTree(tree.root);
+
+
+
+        int n=4;
+        System.out.println(n+"이라는 데이터가 있는가?");
+        tree.searchData(n,tree.root);
+
+        n=6;
+        System.out.println(n+"이라는 데이터가 있는가?");
+        tree.searchData(n,tree.root);
+
+        n=11;
+        System.out.println(n+"이라는 데이터가 있는가?");
+        tree.searchData(n,tree.root);
+
+
+
     }
 }

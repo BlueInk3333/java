@@ -1,4 +1,5 @@
 package data_structure.tree;
+import com.sun.org.apache.xpath.internal.functions.FuncFalse;
 import data_structure.tree.Node;
 
 public class TreeRef {
@@ -41,14 +42,34 @@ public class TreeRef {
 
     public void printTree(Node ref){
         // Full Binary Tree라 가정.
-        System.out.println(ref.getValue());
+        // version_1
+        System.out.print(ref.getValue());
         if(ref.leftNode==null && ref.rightNode==null) {
 
             return;
         }
-
+        System.out.println();
         printTree(ref.leftNode);
+
         printTree(ref.rightNode);
+        System.out.println();
     }
+
+    public void searchData(int v, Node ref) {
+
+        if (v == ref.getValue()) {
+            System.out.println("DB에 "+v+"이라는 데이터 있음.");
+            return;
+        }
+
+        Node temp = (v > ref.getValue()) ? ref.rightNode : ref.leftNode;
+        if(temp==null){
+            System.out.println("DB에 "+v+"이라는 데이터 없음.");
+            return;
+        }
+        searchData(v, temp);
+
+    }
+
 }
 
