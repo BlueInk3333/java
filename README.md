@@ -53,6 +53,15 @@ This project is about implementing data structures in JAVA.
 
    이때, a != b이다.
    당연한 결과이지만, 쉽게 헷갈린다.
+
+   얕은 복사라고 생각 할 수 있는데, (실질적인 값이 복사 된 것이 아닌, 같은 메모리를 가리키게 하여 서로 종속적인 관계)
+   참조 변수 같은 경우는 얕은 복사가 없는 것 같다.
+
+   Node a = new Node(1);
+   Node b =a;
+   a = new Node(2);
+   // 만약 얕은 복사라면, a.getter() == b.getter()이여야 하는데,
+   // 서로 다른 값을 반환 하기에 참조 변수는 주소값을 할당하여 종속적이지 않다고 생각된다.
    
 
 
